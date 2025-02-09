@@ -72,7 +72,7 @@ stages:
   condition: |
     and(
       succeeded(),
-      qe(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+      eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
     )
   jobs:
   - deployment: Deploy
